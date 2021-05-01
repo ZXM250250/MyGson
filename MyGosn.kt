@@ -32,7 +32,8 @@ class MyGosn {
                     if (field.type.name.equals("java.lang.String")){   //是否是原始基本数据类型
                         //基本数据 就直接赋值就好了
                       //  Log.i("log","判断为原始数据"+it)
-                        field.set(t,jsonobject.getJSONObject(it).toString())
+                         field.set(t,jsonobject.getString(it))
+                       // field.set(t,jsonobject.getJSONObject(it).toString())
                     }else if (field.type.name.equals("java.util.List")){  //判断属性是否为List
                         Log.i("测试one11","单个属性键集合的解析"+field.name)
                         val s=analysis(field,jsonobject)
